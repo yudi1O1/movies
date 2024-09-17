@@ -44,7 +44,8 @@ function ProtectedRoute({ children }) {
     (
       <div className="layout p-1">
         <div className="header bg-primary flex justify-between p-2">
-          <div>
+          <div className="logoDiv">
+            <img src="/logo.png" className="logo" alt="" />
             <h1 className="text-2xl text-white cursor-pointer"
               onClick={() => navigate("/")}
             >MovieBook.com</h1>

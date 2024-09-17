@@ -38,3 +38,10 @@ textarea {
 resize: none;
 width: 95% !important;
 }
+.logoDiv{
+  display:flex;
+  align-items: center;
+}
+.logo{
+  width: 4rem;
+}
