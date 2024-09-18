@@ -8,6 +8,8 @@ import { RegisterUser } from '../../apicalls/users'
 
 
 
+
+
 const Register = () => {
 
   const navigate = useNavigate()
@@ -18,6 +20,8 @@ const Register = () => {
         if(response.success){
           message.success(response.message)
           console.log(response.message)
+          navigate("/login")
+
 
         }
         else{
