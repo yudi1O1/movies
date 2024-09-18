@@ -1,9 +1,10 @@
 import { axiosInstance } from ".";
+const host = "https://movies-f1w9.onrender.com"
 
 // make payment
 export const MakePayment = async (token, amount) => {
   try {
-    const response = await axiosInstance.post("/api/bookings/make-payment", {
+    const response = await axiosInstance.post(`${host}/api/bookings/make-payment`, {
       token,
       amount,
     });
@@ -18,7 +19,7 @@ export const MakePayment = async (token, amount) => {
 export const BookShowTickets = async (payload) => {
     try {
       const response = await axiosInstance.post(
-        "/api/bookings/book-show",
+        `${host}/api/bookings/book-show`,
         payload
       );
       return response.data;
@@ -30,7 +31,7 @@ export const BookShowTickets = async (payload) => {
   // get bookings of a user
   export const GetBookingsOfUser = async () => {
     try {
-      const response = await axiosInstance.get("/api/bookings/get-bookings");
+      const response = await axiosInstance.get(`${host}/api/bookings/get-bookings`);
       return response.data;
     } catch (error) {
       return error.response.data;

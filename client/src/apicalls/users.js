@@ -1,7 +1,7 @@
 import axios from "axios";
 const { axiosInstance } = require(".");
 const host = "https://movies-f1w9.onrender.com"
-// "proxy": "https://movies-f1w9.onrender.com"
+
 
 
 
